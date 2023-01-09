@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Name.module.css";
 import { Collapse } from "@nextui-org/react";
 import WaveformPlayer from "../../components/WaveformPlayer";
@@ -24,7 +25,7 @@ export default function band({ data }) {
         <div className={styles.grid}>
           <div className={styles.image}>
             {src.startsWith("http") ? (
-              <Image src={src} alt={srcCredit} className={styles.theImage} width={500} height={500} />
+              <Image src={src} alt="Artist picture" className={styles.theImage} width={500} height={500} />
             ) : (
               <Image src={"https://greenmark.fly.dev/logos/" + src} alt={srcCredit} className={styles.theImage} width={500} height={500} />
             )}
@@ -57,10 +58,18 @@ export default function band({ data }) {
             <Collapse title="SOCIAL MEDIA">
               {/* SOCIAL MEDIA TAB SO WE CAN REMOVE PICTURES AND PUT ILLUSTRATION */}
               <div className={styles.members}>
-                <div className={styles.member}>FACEBOOK</div>
-                <div className={styles.member}>TWITTER</div>
-                <div className={styles.member}>INSTAGRAM</div>
-                <div className={styles.member}>SPOTIFY</div>
+                <Link href="www.facebook.com" className={styles.member}>
+                  <p> FACEBOOK</p>
+                </Link>
+                <Link href="www.twitter.com" className={styles.member}>
+                  <p> TWITTER</p>
+                </Link>
+                <Link href="www.instagram.com" className={styles.member}>
+                  <p> INSTAGRAM</p>
+                </Link>
+                <Link href="www.spotify.com" className={styles.member}>
+                  <p> SPOTIFY</p>
+                </Link>
               </div>
             </Collapse>
           </Collapse.Group>

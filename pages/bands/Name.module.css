@@ -52,6 +52,15 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.members a {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
 .member {
   display: grid;
   align-items: center;
