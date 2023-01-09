@@ -3,11 +3,13 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "./Name.module.css";
 import { Collapse } from "@nextui-org/react";
+import WaveformPlayer from "../../components/WaveformPlayer";
 
 export default function band({ data }) {
   const src = data.band.logo;
   const srcCredit = data.band.logoCredits;
   const router = useRouter();
+  const audioUrl = "https://soundcloud.com/owkeymusic/laads-flyder/s-3220SziKxUO";
 
   return (
     <>
@@ -22,21 +24,9 @@ export default function band({ data }) {
         <div className={styles.grid}>
           <div className={styles.image}>
             {src.startsWith("http") ? (
-              <Image
-                src={src}
-                alt={srcCredit}
-                className={styles.theImage}
-                width={500}
-                height={500}
-              />
+              <Image src={src} alt={srcCredit} className={styles.theImage} width={500} height={500} />
             ) : (
-              <Image
-                src={"https://greenmark.fly.dev/logos/" + src}
-                alt={srcCredit}
-                className={styles.theImage}
-                width={500}
-                height={500}
-              />
+              <Image src={"https://greenmark.fly.dev/logos/" + src} alt={srcCredit} className={styles.theImage} width={500} height={500} />
             )}
             {!srcCredit ? null : <p className={styles.credits}>{srcCredit}</p>}
           </div>
@@ -56,6 +46,21 @@ export default function band({ data }) {
             <Collapse title="GENRE">
               <div className={styles.members}>
                 <div className={styles.member}>{data.band.genre}</div>
+              </div>
+            </Collapse>
+            <Collapse title="PREVIEW PLAYER">
+              {/* SOCIAL MEDIA TAB SO WE CAN REMOVE PICTURES AND PUT ILLUSTRATION */}
+              <div className={styles.members}>
+                <WaveformPlayer audioUrl={audioUrl} />
+              </div>
+            </Collapse>
+            <Collapse title="SOCIAL MEDIA">
+              {/* SOCIAL MEDIA TAB SO WE CAN REMOVE PICTURES AND PUT ILLUSTRATION */}
+              <div className={styles.members}>
+                <div className={styles.member}>FACEBOOK</div>
+                <div className={styles.member}>TWITTER</div>
+                <div className={styles.member}>INSTAGRAM</div>
+                <div className={styles.member}>SPOTIFY</div>
               </div>
             </Collapse>
           </Collapse.Group>

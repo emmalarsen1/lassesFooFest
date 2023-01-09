@@ -8,6 +8,26 @@ function Footer() {
       <div className={styles.footerGrid}>
         <Newsletter />
         <div className={styles.quicklinks}>
+          <h2>SOME</h2>
+          <ul className={styles.footer_links}>
+            <li>
+              <Anchor href="/tickets">INSTAGRAM</Anchor>
+            </li>
+            <li>
+              <Anchor href="/schedule">FACEBOOK</Anchor>
+            </li>
+            <li>
+              <Anchor href="/about/">TWITTER</Anchor>
+            </li>
+            <li>
+              <Anchor href="/about/">YOUTUBE</Anchor>
+            </li>
+            <li>
+              <Anchor href="/contact/">TIKTOK</Anchor>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.quicklinks}>
           <h2>QUICK LINKS</h2>
           <ul className={styles.footer_links}>
             <li>
