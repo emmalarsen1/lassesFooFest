@@ -1,0 +1,10 @@
+.controls {
+  display: flex;
+  justify-content: space-around;
+}
+
+.play {
+  size: 2rem;
+}
+.mute {
+}
