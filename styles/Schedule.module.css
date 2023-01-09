@@ -1,0 +1,185 @@
+.main {
+  padding: 100px 1rem;
+  background-image: url(/1555186463.svg);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+.daypicker {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  overflow-y: auto;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+.daypicker::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.daypicker {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.daysbtn {
+  background: none;
+  border: none;
+  margin: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.daysbtn h3 {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--nature-green);
+  font-weight: 700;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.daysbtn:first-child {
+  padding-left: calc(50vw - 165px);
+}
+.daysbtn:last-child {
+  padding-right: calc(50vw - 155px);
+}
+
+.daysbtn h3:hover {
+  -webkit-text-fill-color: var(--nature-green);
+}
+
+.daysbtn .active {
+  -webkit-text-fill-color: var(--nature-green);
+}
+
+.linkHere {
+  color: var(--nature-green);
+  -webkit-text-fill-color: var(--nature-green);
+  font-size: 2rem;
+}
+
+.breakTime {
+  color: var(--nature-green);
+  -webkit-text-fill-color: var(--nature-green);
+  font-size: 2rem;
+}
+
+.h2underheader {
+  text-align: center;
+}
+
+/* NEW GRID */
+.gridWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.new_grid {
+  padding-top: 2rem;
+  display: grid;
+  grid-template-columns: auto repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 1000px;
+  overflow-x: auto;
+}
+
+.new_grid h3 {
+  font-size: 2rem;
+  color: var(--nature-green);
+  text-align: center;
+}
+
+.new_grid h2 {
+  margin: 0;
+  padding: 0 2px;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.new_oneScheduleActs,
+.new_times {
+  display: grid;
+  grid-auto-rows: 1fr 0.75fr;
+  gap: 1rem;
+}
+
+.new_act {
+  background-color: rgba(122, 172, 83, 0.1);
+  color: var(--nature-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+.new_act h2,
+.new_break h2 {
+  font-size: 1.25rem;
+}
+
+.new_break {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.new_break_line {
+  background-color: var(--nature-green);
+  height: 3px;
+  width: 100%;
+}
+
+.new_times {
+  background: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: var(--nature-green) 2px;
+  font-size: 2rem;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+/* Make the page responsive */
+@media (max-width: 600px) {
+  .daysbtn h3 {
+    font-size: 2rem;
+  }
+  .daysbtn:first-child {
+    padding-left: calc(50vw - 100px);
+  }
+  .daysbtn:last-child {
+    padding-right: calc(50vw - 100px);
+  }
+  .new_times {
+    font-size: 1.5rem;
+    -webkit-text-stroke: var(--nature-green) 1px;
+  }
+  .new_act h2 {
+    font-size: 1rem;
+  }
+  .linkHere {
+    color: var(--nature-green);
+    -webkit-text-fill-color: var(--nature-green);
+    font-size: 1rem;
+  }
+  .new_oneScheduleActs,
+  .new_times {
+    grid-auto-rows: 1fr 0.5fr;
+  }
+  .daypicker {
+    gap: 1.5rem;
+  }
+  .new_break_line {
+    height: 2px;
+  }
+}

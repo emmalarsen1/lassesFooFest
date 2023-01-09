@@ -1,0 +1,19 @@
+.main {
+  padding: 100px 1rem;
+  background-image: url(/1555186463.svg);
+  background-position: bottom;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}

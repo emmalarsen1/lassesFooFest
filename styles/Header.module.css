@@ -1,0 +1,129 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.burger_wrapper {
+  --burger-height: 2rem;
+  cursor: pointer;
+  display: flex;
+  height: var(--burger-height);
+  aspect-ratio: 1.25/1;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger {
+  background: var(--nature-green);
+  width: 100%;
+  height: 4px;
+  position: relative;
+  transition: background 10ms 300ms ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease;
+  position: absolute;
+  background: var(--nature-green);
+  width: 100%;
+  height: 4px;
+  content: "";
+}
+
+.hamburger::before {
+  top: calc(var(--burger-height) / -2 + 2px);
+}
+
+.hamburger::after {
+  top: calc(var(--burger-height) / 2 - 2px);
+}
+
+.hamburger.open {
+  background: transparent;
+}
+
+.hamburger.open::before,
+.hamburger.open::after {
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease;
+  top: 0;
+}
+
+.hamburger.open::before {
+  transform: rotate(45deg);
+}
+
+.hamburger.open::after {
+  transform: rotate(-45deg);
+}
+
+.menu {
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  background-color: var(--am-blue);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.menu.close {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu.open {
+  opacity: 100;
+}
+
+.menu_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 0;
+}
+
+.menu_links_wrapper {
+  display: grid;
+}
+
+.menu_links a {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px var(--nature-green);
+  letter-spacing: 0.5rem;
+}
+
+.menu_links a:hover,
+.menu_links a.active {
+  -webkit-text-fill-color: var(--nature-green);
+}
+
+.logo_large {
+  display: block;
+}
+
+.logo_small {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .logo_small {
+    display: block;
+  }
+  .logo_large {
+    display: none;
+  }
+  .menu_links a {
+    font-size: 2rem;
+    -webkit-text-stroke: 1px var(--nature-green);
+  }
+}
