@@ -7,6 +7,7 @@ import { SSRProvider } from "@react-aria/ssr";
 
 function MyApp({ Component, pageProps, bandData }) {
   const [state, setState] = useState("close");
+  const [isBlured, setBlured] = useState(false);
   return (
     <SSRProvider>
       <Head>
@@ -14,8 +15,8 @@ function MyApp({ Component, pageProps, bandData }) {
         <meta name="description" content="GREENMARK FESTIVAL" />
         <link rel="icon" href="/gmfavicon.svg" />
       </Head>
-      <Layout state={state} setState={(state) => setState(state)}>
-        <Component {...pageProps} bandData={bandData} setState={(state) => setState(state)} />
+      <Layout isBlured={isBlured} setBlured={(isBlured) => setBlured(isBlured)} state={state} setState={(state) => setState(state)}>
+        <Component {...pageProps} bandData={bandData} setState={(state) => setState(state)} isBlured={isBlured} setBlured={(isBlured) => setBlured(isBlured)} />
       </Layout>
     </SSRProvider>
   );
