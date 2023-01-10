@@ -25,7 +25,7 @@ function Booking({ setState, state, isBlured, setBlured }) {
           className={styles.close_btn}
           onClick={() => {
             setState("close");
-            setBlured(!isBlured);
+            setBlured(false);
           }}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" className="bi bi-x" viewBox="0 0 16 16">

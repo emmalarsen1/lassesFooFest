@@ -65,6 +65,7 @@
   cursor: pointer;
   top: 1rem;
 }
+
 .blur_btn {
   height: 32px;
   background-color: var(--nature-green);
@@ -314,6 +315,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .blur_btn {
+    display: none;
+  }
+
   .menu {
     width: 100vw;
     min-width: 0;
