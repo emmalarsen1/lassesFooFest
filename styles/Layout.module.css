@@ -1,0 +1,5 @@
+.blur {
+  filter: blur(3px);
+  transition: 5s linear;
+  background-color: rgba(1, 1, 27, 0.108);
+}

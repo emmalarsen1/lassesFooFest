@@ -1,0 +1,32 @@
+.main {
+  padding: 100px 1rem;
+  background-image: url(/1555186463.svg);
+  background-position: bottom;
+  box-sizing: border-box;
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75vh;
+}
+
+.wrapper {
+  margin: 5rem auto 0;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.h3 {
+  text-align: center;
+  text-transform: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.back:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}

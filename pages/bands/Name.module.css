@@ -12,10 +12,12 @@
 }
 
 .back {
+  position: fixed;
   font-size: 1rem;
   cursor: pointer;
   align-self: flex-start;
-  left: 1rem;
+  left: 4rem;
+  top: 8vh;
 }
 
 .back:hover {
@@ -72,4 +74,15 @@
   text-transform: uppercase;
   font-weight: bold;
   margin: 0;
+}
+
+@media (max-width: 500px) {
+  .back {
+    position: fixed;
+    font-size: 0.8rem;
+    cursor: pointer;
+    align-self: flex-start;
+    left: 1.2rem;
+    top: 5rem;
+  }
 }

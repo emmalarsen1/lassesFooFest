@@ -2,7 +2,7 @@
   display: grid;
   place-items: center;
   color: var(--nature-green);
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .footerGrid {
@@ -15,6 +15,10 @@
 
 .footer a {
   font-size: 1rem;
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
 .footer ul {
   padding: 0;

@@ -69,15 +69,14 @@ function WaveformPlayer() {
       <div className={styles.container}>
         <div className={styles.controls}>
           <button className={styles.play} onClick={handlePlayPause}>
-            {!playing ? <Image src={playIconSVG} alt="Play" /> : <Image src={pauseIconSVG} alt="Pause" />}
+            {!playing ? <Image className={styles.icon} src={playIconSVG} alt="Play" /> : <Image className={styles.icon} src={pauseIconSVG} alt="Pause" />}
           </button>
           <button className={styles.mute} onClick={handleMUTE}>
-            {!mute ? <Image src={unmuteIconSVG} alt="mute" /> : <Image src={muteIconSVG} alt="unmute" />}
+            {!mute ? <Image className={styles.icon} src={unmuteIconSVG} alt="mute" /> : <Image className={styles.icon} src={muteIconSVG} alt="unmute" />}
           </button>
         </div>
-        <div className={styles.waveformContainer}>
-          <div id="waveform" className={styles.waveform} />
-        </div>
+
+        <div id="waveform" className={styles.waveform} />
       </div>
       <Link className={styles.hearmore} href={"https://open.spotify.com/"}>
         HEAR MORE ON SPOTIFY HERE!
