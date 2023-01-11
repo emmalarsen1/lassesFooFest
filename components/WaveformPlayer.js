@@ -24,41 +24,35 @@ const formWaveSurferOptions = () => ({
 });
 
 function WaveformPlayer() {
-  const waveformRef = useRef(null);
   const wavesurfer = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [mute, setMute] = useState(false);
 
+  // random copyright free music
   const url = "https://www.mfiles.co.uk/mp3-downloads/brahms-st-anthony-chorale-theme-two-pianos.mp3";
 
   useEffect(() => {
     create();
-    console.log("useEffekt");
     return () => {
       if (wavesurfer.current) {
-        console.log("destroy");
         wavesurfer.current.destroy();
       }
     };
   }, []);
 
   const create = async () => {
-    console.log("create");
     const WaveSurfer = (await import("wavesurfer.js")).default;
     const options = formWaveSurferOptions();
     wavesurfer.current = WaveSurfer.create(options);
     wavesurfer.current.load(url);
-    console.log("load");
   };
 
   const handlePlayPause = () => {
-    console.log("pause");
     setPlaying(!playing);
     wavesurfer.current.playPause();
   };
 
   const handleMUTE = () => {
-    console.log("mute");
     setMute(!mute);
     wavesurfer.current.toggleMute();
   };

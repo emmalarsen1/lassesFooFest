@@ -10,7 +10,7 @@ export default function band({ data }) {
   const src = data.band.logo;
   const srcCredit = data.band.logoCredits;
   const router = useRouter();
-  const audioUrl = "https://soundcloud.com/owkeymusic/laads-flyder/s-3220SziKxUO";
+  const audioUrl = "";
 
   return (
     <>
