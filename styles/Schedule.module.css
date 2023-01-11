@@ -11,8 +11,8 @@
   grid-template-columns: repeat(7, 1fr);
   overflow-y: auto;
   gap: 3rem;
-  padding-top: 2rem;
 }
+
 .daypicker::-webkit-scrollbar {
   display: none;
 }
@@ -68,6 +68,7 @@
 }
 
 .h2underheader {
+  padding-top: 2rem;
   text-align: center;
 }
 
@@ -75,6 +76,8 @@
 .gridWrapper {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  height: 1325px;
 }
 
 .new_grid {
@@ -181,5 +184,8 @@
   }
   .new_break_line {
     height: 2px;
+  }
+  .gridWrapper {
+    height: 1200px;
   }
 }

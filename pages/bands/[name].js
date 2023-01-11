@@ -50,7 +50,6 @@ export default function band({ data }) {
               </div>
             </Collapse>
             <Collapse title="PREVIEW PLAYER">
-              {/* SOCIAL MEDIA TAB SO WE CAN REMOVE PICTURES AND PUT ILLUSTRATION */}
               <div className={styles.members}>
                 <WaveformPlayer audioUrl={audioUrl} />
               </div>
