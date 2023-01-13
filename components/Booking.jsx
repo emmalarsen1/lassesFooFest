@@ -38,7 +38,7 @@ function Booking({ setState, state, isBlured, setBlured }) {
             setBlured(!isBlured);
           }}
         >
-          {!isBlured ? "BLUR IT" : "MAKE IT CLEAR"}
+          {!isBlured ? "BLUR IT" : "UNBLUR IT"}
         </div>
         <BookingForm />
       </div>
