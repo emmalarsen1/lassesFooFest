@@ -60,10 +60,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   z-index: 1000;
   cursor: pointer;
-  top: 1rem;
 }
 
 .blur_btn {
@@ -76,10 +74,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
   z-index: 1000;
-  right: 1rem;
+}
+
+.btnWrapper {
+  position: fixed;
   top: 1rem;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
 }
 
 .ticket,
