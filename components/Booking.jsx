@@ -1,10 +1,5 @@
 import BookingForm from "./BookingForm";
 import styles from "../styles/Booking.module.css";
-import { useEffect, useState } from "react";
-import Image from "next/image";
-
-import sunIcon from "../public/sun.svg";
-import hazeIcon from "../public/haze.svg";
 
 function Booking({ setState, state, isBlured, setBlured }) {
   return (
